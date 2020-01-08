@@ -1,2 +1,2 @@
 # JAVA-PROJECTS
- All projects in java
+ All java projects
