@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewPersonaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="#{bundle.ViewPersonaLabel_idPersona}"/>
+                    <p:outputLabel value="#{personaController.selected.idPersona}" title="#{bundle.ViewPersonaTitle_idPersona}"/>
+                    <p:outputLabel value="#{bundle.ViewPersonaLabel_nombre}"/>
+                    <p:outputLabel value="#{personaController.selected.nombre}" title="#{bundle.ViewPersonaTitle_nombre}"/>
+                    <p:outputLabel value="#{bundle.ViewPersonaLabel_apellido}"/>
+                    <p:outputLabel value="#{personaController.selected.apellido}" title="#{bundle.ViewPersonaTitle_apellido}"/>
+                    <p:outputLabel value="#{bundle.ViewPersonaLabel_email}"/>
+                    <p:outputLabel value="#{personaController.selected.email}" title="#{bundle.ViewPersonaTitle_email}"/>
+                    <p:outputLabel value="#{bundle.ViewPersonaLabel_telefono}"/>
+                    <p:outputLabel value="#{personaController.selected.telefono}" title="#{bundle.ViewPersonaTitle_telefono}"/>
+                </p:panelGrid>
+                <br />
+                <p:commandLink action="#{personaController.destroyAndView}" value="#{bundle.ViewPersonaDestroyLink}"/>
+                <br />
+                <br />
+                <p:link outcome="Edit" value="#{bundle.ViewPersonaEditLink}"/>
+                <br />
+                <p:commandLink action="#{personaController.prepareCreate}" value="#{bundle.ViewPersonaCreateLink}" />
+                <br />
+                <p:commandLink action="#{personaController.prepareList}" value="#{bundle.ViewPersonaShowAllLink}"/>
+                <br />
+                <br />
+                <p:link outcome="/index" value="#{bundle.ViewPersonaIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
