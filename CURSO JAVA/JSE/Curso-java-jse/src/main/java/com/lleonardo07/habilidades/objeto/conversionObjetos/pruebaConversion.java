@@ -24,5 +24,6 @@ public class pruebaConversion {
         //Segunda forma de DownCasting, convertir el tipo emp a tipo Gerente
         Gerente gerente = (Gerente) emp;
         System.out.println("DownCasting 2: " + gerente.getObtenerDetallesGerente());
+        
     }
 }
