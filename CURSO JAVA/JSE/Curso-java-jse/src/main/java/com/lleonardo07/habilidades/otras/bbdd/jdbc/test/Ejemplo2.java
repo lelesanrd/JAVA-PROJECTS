@@ -1,4 +1,4 @@
-package com.lleonardo07.habilidades.otras.bbdd.jdbc.datos;
+package com.lleonardo07.habilidades.otras.bbdd.jdbc.test;
 
 import com.lleonardo07.habilidades.otras.bbdd.jdbc.sql.IConstantesSQL;
 import java.sql.*;
@@ -7,20 +7,20 @@ import java.sql.*;
  *
  * @author Leand
  */
-public class datos {
+public class Ejemplo2 {
 
     public static void main(String[] args) {
         
-        // 1) Nuestra cadena de conexión a la base de datos
-        String JDBC_URL = "jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC";
+        // 1) Nuestra cadena de conexión a la base de Ejemplo2
+        String JDBC_URL = "jdbc:mysql://localhost:3307/test?useSSL=false&serverTimezone=UTC";
         String JDBC_USER = "root";
         String JDBC_PASS = "admin";
 
         try {
-            // 2) Creamos el objeto de conexion a base de datos
+            // 2) Creamos el objeto de conexion a base de Ejemplo2
             Connection con = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASS);
             
-            // 3) Intrucciones para la base de datos. Creamos el Staement (exiten 3 tipos, Statement, PreparedStatemend y CallableStatement.
+            // 3) Intrucciones para la base de Ejemplo2. Creamos el Staement (exiten 3 tipos, Statement, PreparedStatemend y CallableStatement.
             Statement stmt = con.createStatement();
             
             // 4) Query o consulta a realizar.

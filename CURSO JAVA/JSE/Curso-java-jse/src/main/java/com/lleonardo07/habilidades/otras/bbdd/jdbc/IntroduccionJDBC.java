@@ -10,7 +10,7 @@ public class IntroduccionJDBC {
     public static void main(String[] args) {
         
         //Paso 1: Creamos nuestra cadena de conexion a MySQL
-        String JDBC_URL = "jdbc:mysql://localhost:3306/pruebas?useSSL=false&serverTimezone=UTC";
+        String JDBC_URL = "jdbc:mysql://localhost:3307/pruebas?useSSL=false&serverTimezone=UTC";
         String JDBC_USER = "root";
         String JDBC_PASS = "admin";
         
