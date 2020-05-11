@@ -46,43 +46,19 @@ public class ManejoUsuario {
         }
         
         //========================= INSERT =========================
-        //Creamos un nuevo objeto tipo usuario
-//        Usuario u = new Usuario();
-//        
-//        //Agregamos los datos a insertar
-//        //OPCIONAL: como el ID se autoincrementa, no es necesario agregarlo.
-//        u.setUsuario("otto");
-//        u.setPassword("123");
-//        
+//        //Creamos un nuevo objeto tipo usuario
+//        Usuario u = new Usuario("otto", "123");
 //        //Ejecutamos el método insert
 //        usuarioJDBC.insert(u);
-//        
-//        System.out.println("");
-        
+
         //========================= UPDATE =========================
          //Creamos un nuevo objeto tipo usuario
-        Usuario u = new Usuario();
-        
-        //Agregamos los datos a insertar
-        //OPCIONAL: como el ID se autoincrementa, no es necesario agregarlo.
-        u.setIdUsuario(2);
-        u.setUsuario("adam");
-        u.setPassword("222");
-
+        Usuario u = new Usuario(2, "lele", "113");
         //Ejecutamos el método update
         usuarioJDBC.update(u);
         
-        
         //========================= DELETE =========================
          //Creamos un nuevo objeto tipo usuario
-//        Usuario u = new Usuario();
-//        
-//        //Agregamos los datos a insertar
-//        //OPCIONAL: como el ID se autoincrementa, no es necesario agregarlo.
-//        u.setIdUsuario(1);
-//        
-//        //Ejecutamos el método update
-//        usuarioJDBC.delete(u);
-        
+        usuarioJDBC.delete(new Usuario(2));
     }
 }
